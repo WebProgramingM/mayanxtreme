@@ -6,26 +6,124 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<link rel="stylesheet" href="css/main.min.css"> 
-	<link href="https://fonts.googleapis.com/css?family=arial:500,800" rel="stylesheet" media="all">
-{# 	<meta property="og:title" content="Coapenitos Cancun, Mexico">
-	<meta property="og:type" content="article">
-	<meta property="og:url" content="http://coapenitos.com/">
-	<meta property="og:url" content="http://coapenitos.com/menu_coapenitos.pdf">
-	<meta property="og:image" content="http://coapenitos.com/img/opengraph.png">
-	<meta property="og:image:type" content="image/png">
-	<meta property="og:image:width" content="600">
-	<meta property="og:image:height" content="600">
-	<meta property="og:description" content="Los tacos mas Coapos.">
-	<meta name="author" content="@socialastronauts">
-	<meta name="keywords" content="{{ keywords }}"> #}
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-<body class="background">
-	<div class="container">
-		<div class="col-12">
-			
+<body>
+	<nav class="navbar navbar-expand-sm navbar-light bg-light">
+		<a class="navbar-brand" href="/">
+			<img src="img/logo.png" class="" alt="Mayan Xtreme">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">HOME </a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">TOURS</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">GALLERY</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">CONTACT</a>
+				</li>
+			</ul>
 		</div>
-	</div>
-	<script src="assets/bootstrap.js"></script>
+	</nav>		
+	<section class="container" id="contact">					
+		<div class="row">
+			<div class="col-12 col-lg-6">
+				<h2>Extreme Riviera Maya</h2>
+				<h3>Learn more about the project</h3>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo adipisci nisi cum, nesciunt vero accusantium molestias quas suscipit saepe eveniet similique impedit a totam iste ullam amet eum, nemo enim.</p>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque numquam soluta, deleniti quas necessitatibus deserunt optio suscipit aspernatur adipisci commodi perspiciatis aliquid quia rem aut obcaecati officiis quo, expedita dicta.</p>
+				<br>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque consectetur at labore, doloribus nesciunt, excepturi nihil enim dolorem non maxime cumque magni sequi. Voluptatibus nihil accusamus quas fugit reprehenderit itaque.</p>
+			</div>
+			<div class="col-12 col-lg-6">
+				<h2>jkjeknkej</h2>
+				<section class="contact  shadow" id="contact_form">
+					<div class="row">
+						<div class="col-12">
+							<div id="contact_results"></div>
+						</div>
+						<div class="col-12 pb-2">
+							<input type="text" name="name" id="name" required="true" class="input-field w-100"  placeholder="Name(s)">
+						</div>
+						<div class="col-12 py-2">
+							<input type="email" name="email" id="email" required="true" class="input-field w-100" placeholder="Your E-mail Adress">
+						</div>
+						<div class="col-12 py-2">
+							<textarea name="message" id="message" class="textarea-field w-100" required="true" rows="6" placeholder="Comment"></textarea>
+						</div>
+						<div class="col-4 ml-auto">
+							<input id="submit_btn" class="btn btn-submit" type="submit" value="Send">
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>		
+	</section>					
+					
+
+
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="assets/bootstrap.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script>
+				$(document).ready(function() {
+							$("#submit_btn").click(function() {
+									var proceed = true;
+									//simple validation at client's end
+									//loop through each field and we simply change border color to red for invalid fields
+									
+									if (proceed) //everything looks good! proceed...
+									{
+											//get input field values data to be sent to server
+											post_data = {
+													//'ciudad': $('select[name=ciudad]').val(),
+													'user_name': $('input[name=name]').val(),
+													'group_size': $('input[name=size]').val(),
+													'user_email': $('input[name=email]').val(),
+													//'phone_number': $('input[name=phone]').val(),
+													//'msg': $('textarea[name=message]').val(),
+													// 'nave': $('input[name=nave]').val(),
+													//'origen': $('input[name=origen]').val(),
+													//'destino': $('input[name=destino]').val(),
+													//'numero_personas': $('input[name=quantity]').val(),
+													//'fecha_salida': $('input[name=salida').val(),
+													//'fecha_llegada': $('input[name=fecha_llegada').val(),
+													// 'mensaje': $('input[name=message').val(),
+											};
+											//Ajax post data to server
+											$.post('php/contact_me.php', post_data, function(response) {
+													if (response.type == 'error') { //load json data from server and output message
+															output = '<div class="error">' + response.text + '</div>';
+													} else {
+															output = '<div class="success">' + response.text + '</div>';
+															//reset values in all input fields
+															$("#contact_form  input[required=true]").val('');
+															$("#contact_form #contact_body").slideUp(); //hide form after success
+															document.getElementById("name").value="";
+															document.getElementById("email").value="";
+													}
+													$("#contact_form #contact_results").hide().html(output).slideDown();
+											}, 'json');
+									}
+							});
+			
+							//reset previously set border colors and hide all message on .keyup()
+							$("#contact_form  input[required=true],").keyup(function() {
+									$(this).css('border-color', '');
+									$("#result").slideUp();
+							});
+					});
+			
+			</script>
 </body>
 </html>
