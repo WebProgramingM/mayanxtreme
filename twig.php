@@ -26,7 +26,7 @@
 	// 	$language = 'en';
 	// 	include "array-ingles.php";
 	// }
-	include "array-ingles.php";
+	// include "array-ingles.php";
 	
 	require_once 'vendor/autoload.php';
 
