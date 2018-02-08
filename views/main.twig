@@ -3,12 +3,12 @@
 <head>
 	<title>{{title}}</title>
 	<meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="css/main.min.css"> 
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="stylesheet" href="css/main.min.css"> 
 	<link href="https://fonts.googleapis.com/css?family=arial:500,800" rel="stylesheet" media="all">
-	<meta property="og:title" content="Coapenitos Cancun, Mexico">
+{# 	<meta property="og:title" content="Coapenitos Cancun, Mexico">
 	<meta property="og:type" content="article">
 	<meta property="og:url" content="http://coapenitos.com/">
 	<meta property="og:url" content="http://coapenitos.com/menu_coapenitos.pdf">
@@ -18,77 +18,14 @@
 	<meta property="og:image:height" content="600">
 	<meta property="og:description" content="Los tacos mas Coapos.">
 	<meta name="author" content="@socialastronauts">
-	<meta name="keywords" content="{{ keywords }}">
+	<meta name="keywords" content="{{ keywords }}"> #}
 </head>
 <body class="background">
-	{% if 	title == "Coapeñitos" %}
-	<section class="container" id="menu">
-		<div class="row"> 
-			<div class="col-12">
-				<img src="img/logo.png" class="mx-auto logo img-fluid" width="622" height="300" alt="Logo Coapenitos">
-				<img src="img/coapos.png" class="logo mx-auto img-fluid" width="262" height="130" alt="Los mas Coapos">
-			</div>
-			<div class="col-12 col-sm-6 pt-5">
-				<a href="menu_coapenitos.pdf" target="_blank" class="d-none d-sm-flex" alt=""><img src="img/mmenu.png" class="ml-auto d-none d-sm-flex img1" width="230" height="211" alt="Menú Coapenitos"></a>
-				<a href="menu_coapenitos.pdf" target="_blank" class="d-flex d-sm-none" alt=""><img src="img/mmenu.png" class="mx-auto d-flex d-sm-none img1" width="230" height="211" alt="Menú Coapenitos"></a>
-			</div>
-			<div class="col-12 col-sm-6 pt-5">
-				<a href="ubicacion.php" class="d-none d-sm-flex"  alt=""><img src="img/ubbicacion.png" class="d-none d-sm-flex img2" width="230" height="211" alt="Ubicación Coapenitos"></a>
-				<a href="ubicacion.php" download class="d-flex d-sm-none" alt=""><img src="img/ubbicacion.png" class="mx-auto d-flex d-sm-none img2" width="230" height="211" alt="Ubicación Coapenitos"></a>
-			</div>
-			<div class="col-12 mt-5">
-				<p class="mx-auto">Taquería Coapeñitos - Todos Los Derechos Bien Derechos - Av. Nader #25 Mza 13 Lte 7, SM 2, 2, 77500 Cancún, Q.R.</p>
-			</div>
-		</div>	
-	</section>
-	{% else %}
-	<section class="container" id="ubicacion">
-		<div class="row d-flex justify-content-center"> 
-			<div class="col-6">
-				<a href="/index.php"><img src="img/logo.png" class="img-fluid" alt="Los mas Coapos"></a>
-			</div>	
+	<div class="container">
+		<div class="col-12">
+			
 		</div>
-
-		<div class="row d-flex justify-content-center">
-			<div class="col-8">
-				<h2 class="text-cope">ACÁ ESTAMOS</h2>
-				<p class="text-cope font-weight-bold">Av.Nader #25 Mza 13 Lte 7,SM 2, 2, 77500 Cancun, Q.R.</p>
-			</div>	
-			<div id="map1" class="mb-3"></div>
-			<div class="col-8">
-				<p class="text-cope font-weight-bold">Horarios de 2:00 pm a 2:00 am</p>
-			</div> 	
-		</div>
-	    
-	    <div class="row">
-	      <div class="col-12 mt-5">
-	        <p class="text-cope text-center">Taquería Coapeñitos - Todos Los Derechos Bien Derechos - Av. Nader #25 Mza 13 Lte 7, SM 2, 2, 77500 Cancún, Q.R.</p> 
-	      </div>
-	    </div>	
-	</section>	    	
-	{% endif %}
-	<script type="text/javascript">
-	var iconMeta = 'http://coapenitos.com/img/icono-taco2.png';
-
-  function initMap1() {
-    var location = {lat: 21.1660037, lng: -86.8241921};
-    var map = new google.maps.Map(document.getElementById('map1'), {
-      zoom: 18,
-      center: location,
-      // styles:mapStyle
-    });
-    
-    var marker = new google.maps.Marker({
-      position: location,
-      map: map,
-      icon: iconMeta
-        
-    });
-   
-  }
-
-</script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtN3OBgqJDfp5epT_Be6UTmyz4zYGKRJg&callback=initMap1"></script>	
-
+	</div>
+	<script src="assets/bootstrap.js"></script>
 </body>
 </html>
