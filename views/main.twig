@@ -6,11 +6,11 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-{# 	<link rel="stylesheet" href="css/main.min.css"> #}
+	{# <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> #}
+	<link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
-	<nav class="navbar navbar-expand-sm navbar-light bg-light">
+	{# <nav class="navbar navbar-expand-sm">
 		<a class="navbar-brand" href="/">
 			<img src="img/logo.png" class="" alt="Mayan Xtreme">
 		</a>
@@ -18,7 +18,7 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<div class="collapse navbar-collapse " id="navbarSupportedContent">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item active">
 					<a class="nav-link" href="#">HOME </a>
@@ -34,7 +34,40 @@
 				</li>
 			</ul>
 		</div>
-	</nav>		
+	</nav>		 #}
+	<nav class=" navbar navbar-expand-lg fixed-top">
+			<div class="container-fluid">
+				<a href="./" class="navbar-brand">
+					<a class="navbar-brand" href="/">
+						<img src="img/logo.png" class="" alt="Mayan Xtreme">
+					</a>
+				</a>
+				<button class="navbar-toggler navbar-toggler-right p-2 ml-auto" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+					<div id="menuanim">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>                  
+				</button>
+				<div class="collapse navbar-collapse " id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="#">HOME </a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">TOURS</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">GALLERY</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">CONTACT</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 	<header class="container-fluid" id="home">
 			s
 	</header> 
@@ -43,38 +76,44 @@
 			
 		</div>
 	</div>
-    <section class="container" id="tours">
-        <div class="row my-5">
+    <section class="container py-5" id="tours">
+        <div class="row my-5 py-5">
             <div class="col-lg-6 col-12">
-                <img src="https://dummyimage.com/400x300/000/fff">
+                <img src="https://dummyimage.com/400x300/fff/000">
             </div>
             <div class="col-lg-6 col-12">
-                <h2>Get ready the adventure</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus saepe eos quam nam quisquam, animi itaque enim explicabo illum. Id quo ea harum facilis qui deserunt nihil commodi quidem quas?</p>
-                <button>READ MORE</button>
+                <h2 class="pb-5">Get ready the adventure</h2>
+                <p class="pb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus saepe eos quam nam quisquam, animi itaque enim explicabo illum. Id quo ea harum facilis qui deserunt nihil commodi quidem quas?</p>
+                <a class="btn btn-outline-dange">READ MORE</a>
             </div>
         </div>
-         <div class="row my-5">
-            <div class="col-lg-6 col-12 mt-5">
-                <h2>Get ready the adventure</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus saepe eos quam nam quisquam, animi itaque enim explicabo illum. Id quo ea harum facilis qui deserunt nihil commodi quidem quas?</p>
-            </div>
-            <div class="col-lg-6 col-12">
-                <img src="https://dummyimage.com/400x300/000/fff">
-            </div>
-        </div>
-    </section>
-    
-	<section class="container fluid" id="galery">
-		<div class="col-12">
-			<!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/a58667c7ce1151108ea82a53e485589e.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+	</section>
+    <section class="py-5 my-5" id="tours2">
+		<div class="container py-5 my-5">
+			<div class="row">
+				<div class="col-lg-6 col-12 mt-5">
+					<h2>Get ready the adventure</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus saepe eos quam nam quisquam, animi itaque enim explicabo illum. Id quo ea harum facilis qui deserunt nihil commodi quidem quas?</p>
+				</div>
+				<div class="col-lg-6 col-12">
+					<img src="https://dummyimage.com/400x300/000/fff">
+				</div>
+			</div>
 		</div>
 	</section>
-	<section class="container" id="contact">					
+	
+    
+	<section class="container fluid my-5 py-5" id="galery">
+		<div class="col-12">
+			<!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/5a4cdb2429e3591a960d6da8a92e7149.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+
+		</div>
+	</section>
+	<section class="container py-5 my-5" id="contact">					
 		<div class="row">
 			<div class="col-12 col-lg-6">
-				<h2>Extreme Riviera Maya</h2>
-				<h3>Learn more about the project</h3>
+				<h2 class="pb-2">Extreme Riviera Maya</h2>
+				<h3 class="pb-5">Learn more about the project</h3>
 				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo adipisci nisi cum, nesciunt vero accusantium molestias quas suscipit saepe eveniet similique impedit a totam iste ullam amet eum, nemo enim.</p>
 				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque numquam soluta, deleniti quas necessitatibus deserunt optio suscipit aspernatur adipisci commodi perspiciatis aliquid quia rem aut obcaecati officiis quo, expedita dicta.</p>
 				<br>
@@ -96,7 +135,7 @@
 						<div class="col-12 py-2">
 							<textarea name="message" id="message" class="textarea-field w-100" required="true" rows="6" placeholder="Comment"></textarea>
 						</div>
-						<div class="col-4 ml-auto">
+						<div class="col-4">
 							<input id="submit_btn" class="btn btn-submit" type="submit" value="Send">
 						</div>
 					</div>
