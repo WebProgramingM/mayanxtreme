@@ -4,12 +4,49 @@
 body
 	background-color: black
 	color: white
+footer
+	position fixed
+	left: 0
+	bottom: 0
+	width: 100%
+	color: white
+	background url('../img/fotter.png')
+	background-repeat: no-repeat
+	background-size: 100% 70%
+	background-position: center bottom 
 #home
-	background-image: url('../img/baner1.png')
+	background: url(../img/baner1.png)
 	background-size cover
 	background-repeat: no-repeat
-	background-position: center center
+	background-position: center bottom 
 	height: 100vh!important
+	h2
+		font-family: "Mont Black"
+		font-size: 37px
+		margin-bottom: -7px
+		text-shadow: 2px 2px 8px #000000
+	h3
+		font-family: "Mont Black"
+		font-size: 45px
+		margin-bottom: -7px
+		text-shadow: 2px 2px 8px #000000
+	h4
+		font-family: "Mont Black"
+		font-size: 64px
+		text-shadow: 2px 2px 8px #000000
+	.btn
+		background-color: #3ACE16
+		width: 80%
+		padding: 12px
+		border-radius: 50px	
+		color: white!important
+		box-shadow: 2px 2px 10px rgba(0,0,0,.8);
+#scene
+	height 100vh
+	position: absolute
+	.calendario
+		min-width 65%
+		height auto
 #tours
 	h2
 		font-family: "Mont Bold"
@@ -24,9 +61,11 @@ body
 		border-radius: 50px	
 #tours2
 	background-image: url('../img/fondo.png')
+	background: rgba(0, 0, 0, 0.4);
 	background-size: cover
 	background-position: center center
-	min-height: 70vh
+	padding: 80px 0
+	
 #contact
 	h2
 		font-family: "Mont Bold"
@@ -44,8 +83,80 @@ body
 		padding: 12px
 		border-radius: 50px	
 .navbar 
-	background-color: transparent
+	background url('../img/nav-bkg.png')
+	background-repeat: no-repeat
+	background-size: 100% 70%
 	.nav-link
 		font-family: "Mont SemiBold"
 		font-size: 16px
 		color: white
+		margin-top -40px
+#head
+	padding-top: 17vh
+.wake
+	padding-right: 25% 
+	@media $md
+		padding-top: 5%
+		padding-right: 36%
+.wake-txt
+	padding-right: 21% 
+	text-align: right
+	font-family: Mont-Bold
+	text-shadow: 2px 2px 8px #000000
+	font-size 15px
+	@media $md
+		padding-right: 36%
+.fishi
+	padding-left: 29%
+	@media $md
+		padding-top: 5%
+		padding-left: 41%
+.kite
+	padding-right: 38% 
+	@media $md
+		padding-right: 57%
+.kite-txt
+	padding-right: 31% 
+	text-align: right
+	font-family: Mont-Bold
+	text-shadow: 2px 2px 8px #000000
+	font-size 15px
+	@media $md
+		padding-right: 57%
+		font-family: Mont-Bold
+		text-shadow: 2px 2px 8px #000000
+.skate
+	padding-left: 41%
+	@media $md
+		padding-left: 63%
+.zpline-txt
+	text-align: right 
+	font-family: Mont-Bold
+	text-shadow: 2px 2px 8px #000000
+	font-size 15px
+.team
+	margin-top: 20vh
+	figcaption 
+		background: #FFA939
+		.effect-steve 
+			p
+				background: #f1f1f1
+				color: #2d434e
+.expanded
+	height 50% !important
+	opacity 1
+	transition 0.6s ease
+	.inner
+		height  20% !important
+		transition 0.5s ease-out
+		&.mezcal
+			.inner
+				background-color rgba(254, 213, 0, 0.87)
+			h3
+				color black !important
+			img
+				filter: invert(100%)
+			.button
+				border-color black
+				color black
+				background-color rgba(0, 0, 0, 0)
