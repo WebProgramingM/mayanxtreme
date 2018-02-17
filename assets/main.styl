@@ -10,7 +10,7 @@ footer
 	bottom: 0
 	width: 100%
 	color: white
-	background url('../img/fotter.png')
+	background url('/img/fotter.png')
 	background-repeat: no-repeat
 	background-size: 100% 70%
 	background-position: center bottom 
@@ -55,10 +55,12 @@ footer
 		font-family: "Mont Regular"
 		font-size: 14px
 	.btn
-		background-color: #3ACE16
+		background-color: $color1
 		width: 314px
 		padding: 12px
-		border-radius: 50px	
+		border-radius: 50px
+		color white
+		text-decoration none	
 #tours2
 	background-image: url('../img/fondo.png')
 	background: rgba(0, 0, 0, 0.4);
@@ -78,10 +80,20 @@ footer
 		font-family: "Mont Regular"
 		font-size: 14px
 	.btn
-		background-color: #3ACE16
-		width: 314px
+		background-color: $color1
+		width: 214px
 		padding: 12px
-		border-radius: 50px	
+		border-radius: 50px
+		color white
+		text-decoration none
+	.w3-input 
+		padding: 25px;
+		display: block;
+		border: none;
+		border-bottom: 1px solid #ccc;
+		width: 100%;	
+		&:focus
+			outline none	
 .navbar 
 	background url('../img/nav-bkg.png')
 	background-repeat: no-repeat
@@ -160,3 +172,267 @@ footer
 				border-color black
 				color black
 				background-color rgba(0, 0, 0, 0)
+				
+
+
+.box-el
+	max-width: 100%
+	margin: auto
+.box1
+	height: 300px
+	background: orange;
+	width: 33.3%;
+	margin: 0em .5em;
+	background-image: url("/img/wakeboarding.png")
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	&:hover
+		.the-content-box
+			transform: translateY(0%);
+			background: rgba(black, 0.8);
+			h1
+				opacity 0
+			
+			p
+				opacity: 1;
+				transition: all 400ms ease;
+				transform: translateY(00%);
+				transition-delay: 600ms;
+			
+			a
+				opacity: 1;
+				transform: translateX(0%);
+				transition-delay: 900ms;
+.box2
+	height: 300px
+	background: orange;
+	width: 33.3%;
+	margin: 0em .5em;
+	background-image: url("/img/zipline.png")
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	&:hover
+		.the-content-box
+			transform: translateY(0%);
+			background: rgba(black, 0.8);
+			h1
+				opacity 0
+			
+			p
+				opacity: 1;
+				transition: all 400ms ease;
+				transform: translateY(00%);
+				transition-delay: 600ms;
+			
+			a
+				opacity: 1;
+				transform: translateX(0%);
+				transition-delay: 900ms;
+
+.box3
+	height: 300px
+	background: orange;
+	width: 33.3%;
+	margin: 0em .5em;
+	background-image: url("/img/kitesurfing.png")
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	&:hover
+		.the-content-box
+			transform: translateY(0%);
+			background: rgba(black, 0.8);
+			h1
+				opacity 0
+			
+			p
+				opacity: 1;
+				transition: all 400ms ease;
+				transform: translateY(00%);
+				transition-delay: 600ms;
+			
+			a
+				opacity: 1;
+				transform: translateX(0%);
+				transition-delay: 900ms;
+				
+.box4
+	height: 300px
+	background: orange;
+	width: 33.3%;
+	margin: 0em .5em;
+	background-image: url("/img/sportfishing.png")
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	&:hover
+		.the-content-box
+			transform: translateY(0%);
+			background: rgba(black, 0.8);
+			h1
+				opacity 0
+			
+			p
+				opacity: 1;
+				transition: all 400ms ease;
+				transform: translateY(00%);
+				transition-delay: 600ms;
+			
+			a
+				opacity: 1;
+				transform: translateX(0%);
+				transition-delay: 900ms;
+.box5
+	height: 300px
+	background: orange;
+	width: 33.3%;
+	margin: 0em .5em;
+	background-image: url("/img/woodward.png")
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	&:hover
+		.the-content-box
+			transform: translateY(0%);
+			background: rgba(black, 0.8);
+			h1
+				opacity 0
+			
+			p
+				opacity: 1;
+				transition: all 400ms ease;
+				transform: translateY(00%);
+				transition-delay: 600ms;
+			
+			a
+				opacity: 1;
+				transform: translateX(0%);
+				transition-delay: 900ms;
+				
+.box6
+	height: 300px
+	background: orange;
+	width: 33.3%;
+	margin: 0em .5em;
+	background-image: url("/img/bungeejump.png")
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	&:hover
+		.the-content-box
+			transform: translateY(0%);
+			background: $balckmaya
+			h1
+				opacity 0
+			
+			p
+				opacity: 1;
+				transition: all 400ms ease;
+				transform: translateY(00%);
+				transition-delay: 600ms;
+			
+			a
+				opacity: 1;
+				transform: translateX(0%);
+				transition-delay: 900ms;
+.box-inner
+	position: absolute;
+	height: 80%;
+	width: 100%;
+	left 0
+	top: 0
+	overflow: hidden;
+	
+.the-content-box
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background: $balckmaya
+	color: white;
+	transform: translateY(70%);
+	transition: all 600ms ease;
+	h1
+		padding: 0.2em 0em 0em 0em;
+		margin: 0;
+		font-family: helvetica;
+		transition: all 400ms ease;
+	
+	hr
+		background: #4A89CD;
+		height: 3px;
+		border: none;
+		margin: 1em 0em 0em 0em;
+		width: 0;
+		transition: all 400ms ease;
+	
+	p
+		letter-spacing: 1px;
+		opacity: 0;
+		font-family: arial !important;
+		transition: all 900ms ease;
+		transform: translateY(40%);
+		font-weight: lighter;
+	
+	a
+		display: inline-block;
+		width 300px
+		height 60px
+		line-height 60px
+		text-align center
+		border 1px solid white
+		border-radius 50px
+		color: white !important;
+		text-decoration: none;
+		font-weight: bolder;
+		position: relative;
+		transition: all 600ms ease;
+		opacity: 0;
+		transform: translateX(20%);
+		&:hover
+			background: #1B324B;
+	
+.content-box-inner
+	padding: 0em 1em;
+
+.box-footer
+	position: absolute;
+	height: 80%;
+	width: 100%;
+	left 0
+	top: 20%;
+	overflow: hidden;
+.the-content-footer
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background-color $cope
+	color: white;
+	transform: translateY(75%);
+	transition: all 600ms ease;
+	// z-index 1
+.the-content-footer2
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background-color $cope2
+	color: white;
+	transform: translateY(75%);
+	transition: all 600ms ease;
+		
+.content-box-footer
+	font-family: "Mont SemiBold"
+	padding: 1em 1em;
+
+.green
+	color $color1 !important
+
+
+.img-fluid-mov
+	@media $sm
+		width 100%
+		height auto
+	@media $xs
+		width 100%
+		height auto

@@ -44,28 +44,20 @@
 			</button>
 			<div class="collapse navbar-collapse " id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="#">HOME </a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">TOURS</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">GALLERY</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">CONTACT</a>
-					</li>
+					{% for item in op.menuNav %}	
+						<li class="nav-item active">
+							<a class="nav-link" href="{{item[0]}}">{{item[1]}} </a>
+						</li>
+					{% endfor %}
+					
 				</ul>
 			</div>
 		</div>
 	</nav>
 	<header class="" id="home">
-		<div class="p-0 d-flex align-items-center" id="scene">
-			<img src="img/plantas.png" class="layer w-100" data-depth="0.20">
-		</div> 
+		
 		<section class="container" id="head">	
-			<div class="row d-flex justify-content-center">
+			<div class="row d-lg-flex justify-content-center  d-none d-lg-block">
 				<div class="col-6">
 					<img src="img/wake.png" alt="" class="img-fluid d-flex wake ml-auto">
 					<p class="wake-txt">WAKEBOARDING</p>
@@ -75,7 +67,7 @@
 					<p class="fishi">WAKEBOARDING</p>
 				</div>
 			</div>	
-			<div class="mt-5 pt-4 row d-flex justify-content-center">
+			<div class="mt-5 pt-4 row d-lg-flex justify-content-center  d-none d-lg-block">
 				<div class="col-6">
 					<img src="img/kite.png" alt="" class="img-fluid d-flex kite ml-auto">
 					<p class="kite-txt">KITE SURFING</p>
@@ -85,8 +77,8 @@
 					<p class="skate">SKATEBOARDING</p>
 				</div>
 			</div>	
-			<div class="row d-flex justify-content-center">
-				<div class="col mt-5 pt-5 pr-0">
+			<div class="row d-flex justify-content-center ">
+				<div class="col mt-5 pt-5 pr-0  d-none d-lg-block">
 					<img src="img/zpline.png" alt="" class="img-fluid d-flex zpline ml-auto">
 					<p class="zpline-txt">ZIPLINE TOUR</p>
 				</div>
@@ -96,7 +88,7 @@
 					<h4 class="text-center">RIVIERA</h4>
 					<a href="#" class="btn mx-auto">SHOW ME MORE</a>
 				</div>
-				<div class="col mt-5 pt-5">
+				<div class="col mt-5 pt-5  d-none d-lg-block">
 					<img src="img/bunge.png" alt="" class="img-fluid bungle d-block">
 					<p class="bungle">BUNGEE JUMP</p>
 				</div>
@@ -105,133 +97,101 @@
 		</section>
 		
 	</header> 
-	<section class="team">
-		<div class="container">
-			<div class="row">
-				<div class="col-12 my-5">
-					<div class="row">
-						<h3 class="mx-auto">A diferent way to experience the paradise</h3>
-					</div>
-				</div>	
-				<div class="col-4 effect-steve ">
-					<img src="https://dummyimage.com/400x350/fff/000" class="img-fluid" alt="">
-					<figcaption class="py-4 mb-3 stage mezcal">
-					<h3 class="text-center inner">WAKEBOARDING</h3>
-					</figcaption>
-				</div>
-				<div class="col-4 effect-steve">
-					<img src="https://dummyimage.com/400x350/fff/000" class="img-fluid" alt="">
-					<figcaption class="py-4 mb-3">
-					<h3 class="text-center">ZIPLINE TOUR</h3>
-					</figcaption>
-				</div>
-				<div class="col-4 effect-steve">
-					<img src="https://dummyimage.com/400x350/fff/000" class="img-fluid" alt="">
-					<figcaption  class="py-4 mb-3">
-					<h3 class="text-center">KITE SURFING</h3>
-					</figcaption>
-				</div>
-				<div class="col-4 effect-steve">
-					<img src="https://dummyimage.com/400x350/fff/000" class="img-fluid" alt="">
-					<figcaption  class="py-4 mb-3">
-					<h3 class="text-center">WOODWARD</h3>
-					</figcaption>
-				</div>
-				<div class="col-4 effect-steve">
-					<img src="https://dummyimage.com/400x350/fff/000" class="img-fluid" alt="">
-					<figcaption  class="py-4 mb-3">
-						<h3 class="text-center">SPORT FISHING</h3>
-					</figcaption>
-				</div>
-				<div class="col-4 effect-steve">
-					<img src="https://dummyimage.com/400x350/fff/000" class="img-fluid" alt="">
-					<figcaption  class="py-4 mb-3">
-						<h3 class="text-center">BUNGEE JUMP</h3>
-					</figcaption>
-				</div>
-			
-				
-			</div>
-		</div>  
-	  </section>
-{# 	<section class="team">
-		<div class="grid">
-			<figure class="effect-steve">
-			<img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=731&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D 731w" />
-			<figcaption>
-				<h2>Sarah <span> Mitchelle</span></h2>
-				<p>Originally from Miami. I love black and white classics, chillout music and green tea.</p>
-			</figcaption>
-			</figure>
-		</div>  
-	</section> #}
+<section class="container">
+<div class="row d-flex justify-content-center ">
+	<h2>A different way to experience the paradise</h2>
+</div>
+{% for item in service.action %}
+	<div class="box-el row  d-flex justify-content-center {% if loop.index == 1 %} mb-3{% endif %}">
+		{% for services in item.cont %}
+			<div class="box{{services.num}} col-12 col-md-6 col-lg mt-3" >
+				<div class="box-inner">
+					<div class="the-content-box">
+						<div class="content-box-inner">
+							<h1 class="text-center">COMING SOON</h1>
+							<div class="d-flex justify-content-center">
+								<a  href="">COMING SOON</a>
+							</div>
+							<div class="mt-5">
+								<p class="text-center">{{services.cont}}</p>
+							</div>
 
-    <section class="container py-5" id="tours">
-        <div class="row">
-            <div class="col-lg-6 col-12">
-				<div class="container">
-					<div class="row">
-						<img class="img-fluid w-100" src="img/tour.png">
+						</div>
 					</div>
 				</div>
-                
-            </div>
-            <div class="col-lg-6 col-12">
-                <h2 class="pb-5">Get ready the adventure</h2>
-                <p class="pb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus saepe eos quam nam quisquam, animi itaque enim explicabo illum. Id quo ea harum facilis qui deserunt nihil commodi quidem quas?</p>
-                <a class="btn btn-outline-dange">READ MORE</a>
-            </div>
-        </div>
-	</section>
-    <section id="tours2">
-		<div class="container d-flex align-items-center" id="pelos">
-			<div class="row">
-				<div class="col-lg-6 col-12 mt-5">
-					<h2>Get ready the adventure</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus saepe eos quam nam quisquam, animi itaque enim explicabo illum. Id quo ea harum facilis qui deserunt nihil commodi quidem quas?</p>
+				<div class="box-footer">
+					<div class="{% if loop.index == 2  %} the-content-footer2  {% else %} the-content-footer {% endif %}">
+						<div class="content-box-footer">
+							<h3 class="text-center">{{services.title}}</h2>
+
+						</div>
+					</div>
 				</div>
-				<div class="col-lg-6 col-12">
-					<img src="https://dummyimage.com/400x300/000/fff">
-				</div>
+			</div>
+		{% endfor %}
+	</div>	
+{% endfor %}
+</section> 
+
+
+
+<section class="container py-5" id="tours">
+	{% for item in inf.information %}
+		<div class="row mt-5 d-flex">
+			<div class="col-lg-6 col-12 {% if loop.index == 2 %} order-2 mt-5 px-0 {% endif %}
+			">
+				<img class="{% if loop.index == 1%} img-fluid {% else %} img-fluid-mov {% endif %}"
+				 src="{{item.image[0]}}">
+			</div>
+			<div class="col-lg-6 col-12 mt-5">
+				<h2 class="pb-5 {% if loop.index == 2 %} green {% endif %}">{{item.title}}</h2>
+				{{item.cont|raw}}
+				{% if loop.index == 1%}
+					<a  href="{{ item.buttons[0] }}" class="btn  btn-outline-dange p-3 mt-3">{{ item.buttons[1] }}</a>
+				{% endif %}
 			</div>
 		</div>
-	</section>
+	{% endfor %}
+</section>
+   
 	
     
-	<section class="container fluid my-5 py-5" id="galery">
-		<div class="col-12">
-			<!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/5a4cdb2429e3591a960d6da8a92e7149.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+<section class="container fluid my-5 py-5" id="galery">
+	<div class="col-12">
+		<!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/5a4cdb2429e3591a960d6da8a92e7149.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
 
-		</div>
-	</section>
+	</div>
+</section>
 	<section class="container py-5 my-5" id="contact">					
 		<div class="row">
 			<div class="col-12 col-lg-6">
-				<h2 class="pb-2">Extreme Riviera Maya</h2>
-				<h3 class="pb-5">Learn more about the project</h3>
-				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo adipisci nisi cum, nesciunt vero accusantium molestias quas suscipit saepe eveniet similique impedit a totam iste ullam amet eum, nemo enim.</p>
-				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque numquam soluta, deleniti quas necessitatibus deserunt optio suscipit aspernatur adipisci commodi perspiciatis aliquid quia rem aut obcaecati officiis quo, expedita dicta.</p>
-				<br>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque consectetur at labore, doloribus nesciunt, excepturi nihil enim dolorem non maxime cumque magni sequi. Voluptatibus nihil accusamus quas fugit reprehenderit itaque.</p>
+				<h2 class="">Extreme Riviera Maya</h2>
+				<h3 class="">Learn more about the project</h3>
+				<p>{{contact.cont}}</p>
+				<p>{{contact.cont2}}</p>
+				<p>{{contact.title}}</p>
+				<p>{{contact.phone}}</p>
+				<p>{{contact.email}}</p>
+				<p>{{contact.adress}}</p>
 			</div>
 			<div class="col-12 col-lg-6">
-				<h2>jkjeknkej</h2>
+				<h3 class="mb-5 text-center">Leave us a message and becomea<br> partner!</h3>
 				<section class="contact  shadow" id="contact_form">
 					<div class="row">
-						<div class="col-12">
+						<div class="col-12 mb-3">
 							<div id="contact_results"></div>
 						</div>
-						<div class="col-12 pb-2">
-							<input type="text" name="name" id="name" required="true" class="input-field w-100"  placeholder="Name(s)">
+						<div class="col-12 mb-3">
+							<input type="text" name="name" id="name" required="true" class="w3-input"  placeholder="Name(s)">
 						</div>
-						<div class="col-12 py-2">
-							<input type="email" name="email" id="email" required="true" class="input-field w-100" placeholder="Your E-mail Adress">
+						<div class="col-12 mb-3">
+							<input type="email" name="email" id="email" required="true" class="w3-input" placeholder="Your E-mail Adress">
 						</div>
-						<div class="col-12 py-2">
-							<textarea name="message" id="message" class="textarea-field w-100" required="true" rows="6" placeholder="Comment"></textarea>
+						<div class="col-12 mb-3">
+							<textarea name="message" id="message" class="w3-input" required="true" rows="6" placeholder="Comment"></textarea>
 						</div>
-						<div class="col-4">
-							<input id="submit_btn" class="btn btn-submit" type="submit" value="Send">
+						<div class="col-12 d-flex justify-content-end">
+							<input id="submit_btn" class="btn" type="submit" value="Send">
 						</div>
 					</div>
 				</section>
@@ -258,13 +218,13 @@
 		<script src="assets/bootstrap.min.js"></script>
 		<script src="js/plugins.js"></script>
 		<script src="js/parallax.min.js"></script>
-		<script src="js/parallax.min.js"></script>
-		<script>
+		
+		<!--<script>
 			// Pretty simple huh?
 			var scene = document.getElementById('scene');
 			var parallax = new Parallax(scene);
-		</script>
-		<script>
+		</script>-->
+		<!--<script>
 				$(document).ready(function() {
 							$("#submit_btn").click(function() {
 									var proceed = true;
@@ -313,7 +273,7 @@
 							});
 					});
 			
-			</script>
+			</script>-->
 
 </body>
 </html>

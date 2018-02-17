@@ -2,10 +2,10 @@
 @import 'nib'
 @import 'nib/gradients'
 
-$cope = rgb(254, 193, 47 );
-$color1 = #3ACE16;
-
-
+$cope = rgba(254, 193, 47 ,1);
+$color1 = rgba(58, 206, 22 ,1);
+$cope2 = rgba(150,82,18,1)
+$balckmaya= rgba(42,42,42,.6)
 placeholder()
 	&::-webkit-input-placeholder
 		{block}
@@ -31,10 +31,10 @@ $xl = "only screen and (min-width: 1200px)"
 	
 
 body, html
-	font-family: "arial", sans-serif;
+	font-family: "Mont Bold", "Mont SemiBold","Mont Heavy";
 	font-weight normal
 	letter-spacing 0.500px
-	font-size 12px
+	font-size 14px
 	line-height 1.4
 	font-kerning normal
 	font-size-adjust .5
@@ -45,13 +45,19 @@ body, html
 	
 	
 h1
-	font-family: "arial", sans-serif;
+	font-family: "Mont Black"
 	font-weight 800	
 
-h2,h3
+h2
 	font-family "arial", sans-serif
 	font-weight 700
-
+h3
+	font-family: "Mont SemiBold"
+	font-weight 700
+a
+	font-family: "Mont Heavy"
+	
+	
 .img-fluid
 	object-fit contain 
 
