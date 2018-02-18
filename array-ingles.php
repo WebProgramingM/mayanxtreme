@@ -2,10 +2,10 @@
 $op = array(
 
 	'menuNav' => array(
-		['#', 'HOME'],
-		['#', 'TOURS'],
-		['#', 'GALLERY'],
-		['#', 'CONTACT'],
+		['#home', 'HOME'],
+		['#tours', 'TOURS'],
+		['#galery', 'GALLERY'],
+		['#contact', 'CONTACT'],
 	),
 	'footerNav' => array(
 		['http://grupoandersons.com/unete','Bolsa de Trabajo','bolsa.png'],
