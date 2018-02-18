@@ -110,6 +110,15 @@ $contact = array(
 	'phone' =>'PHONE:  227 555 0100',
 	'email' =>'E-MAIL:  contact@extremerivieramaya.com',
 	'adress' =>'ADRESS:  Cancún, México.',
+	 'brands'=> array(
+
+	 	["img/woodwardlogo.png","The best tours"],
+	 	["img/partyrockers.png","The best tours"],
+	 	["img/woodwardlogo.png","The best tours"],
+	 	["img/partyrockers.png","The best tours"],
+	 	["img/woodwardlogo.png","The best tours"]
+
+	 ),
 
 );
 
