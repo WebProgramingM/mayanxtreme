@@ -95,14 +95,87 @@ footer
 		&:focus
 			outline none	
 .navbar 
-	background url('../img/nav-bkg.png')
+	background-size: 100% 90%
+	background url('/img/nav-bkg.png')
 	background-repeat: no-repeat
-	background-size: 100% 70%
+	@media $uplg
+		background-size: 100% 70%
 	.nav-link
 		font-family: "Mont SemiBold"
 		font-size: 16px
-		color: white
+		color: $white
 		margin-top -40px
+	.navbar-toggler
+		&:focus
+			outline none
+	&.full
+		height 100% 
+		width 100%
+		position fixed /* Stay in place */
+		z-index 1 /* Sit on top */
+		left 0
+		top 0
+		background $copelight !important
+		overflow-y hidden /* Disable horizontal scroll */
+		transition 0.5s
+		.navbar-brand
+			display none
+		button
+			position absolute
+			top 20px
+			right 15px
+			font-size 60px
+			@media $xs
+				font-size 30px
+				top 15px
+				right 25px
+		.nav-link
+			font-size 2em
+			margin-top 20px
+			color $white !important
+			@media $md
+				font-size 3em	
+#menuanim
+	width 50px
+	height 40px
+	position relative
+	margin 0px 
+	transform rotate(0deg)
+	transition .5s ease-in-out
+	cursor pointer
+	span
+		display block
+		position absolute
+		height 6px
+		width 100%
+		background-color: $white
+		opacity 1
+		left 0
+		transform rotate(0deg)
+		transition .25s ease-in-out
+		&:nth-child(1)
+			top 0
+		&:nth-child(2)
+			top 20px
+		&:nth-child(3)
+			top 20px
+		&:nth-child(4)
+			top 40px
+	&.open
+		span
+			background $white
+			&:nth-child(1)
+				top 18px
+				width 0%
+				left 50%
+			&:nth-child(2)
+				transform rotate(50deg)
+			&:nth-child(3)
+				transform rotate(-50deg)
+			&:nth-child(4)
+				top 18px
+				width 0%
+				left 50%
 #head
 	padding-top: 17vh
 .wake
@@ -456,3 +529,6 @@ footer
 			&:focus
 				outline none !important
 				
+
+.space
+	margin-top 10%
