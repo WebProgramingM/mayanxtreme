@@ -42,7 +42,7 @@
 					<span></span>
 				</div>                  
 			</button>
-			<div class="collapse navbar-collapse " id="navbarSupportedContent">
+		{# 	<div class="collapse navbar-collapse " id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto">
 					{% for item in op.menuNav %}	
 						<li class="nav-item active">
@@ -51,6 +51,22 @@
 					{% endfor %}
 					
 				</ul>
+			</div> #}
+			<div class="navup collapse navbar-collapse" id="navbarCollapse">
+				<div class="navbar-nav ml-auto d-flex align-items-center">
+					{################### Navbar Index Bananabar ##################}
+				{% for link in op.menuNav %}	
+					<div class="nav-item">
+						<a class="nav-link mx-3" href="{{ link[0] }}">{{ link[1]|raw }}</a>
+					</div>
+				{% endfor %}
+			
+	 			{# 	<div class="nav-item my-2 my-md-0 mr-0 mr-lg-3  mt-lg-0 ml-lg-auto  d-md-none d-sm-block">
+						<a class="mr-5" target="_blank" href="{{ link[1] }}"><img src="img/instagram.png" alt="Icono Instagram"></a>
+						<a  target="_blank" href="{{ link[1] }}"><img src="img/facebook.png" alt="Icono Facebook"></a>
+					</div> #}
+				
+				</div>
 			</div>
 		</div>
 	</nav>
@@ -99,7 +115,7 @@
 	</header> 
 
 	{# ###################TOURS########################## #}
-<section class="container">
+<section class="container space">
 <div class="row d-flex justify-content-center ">
 	<h2>A different way to experience the paradise</h2>
 </div>
@@ -137,9 +153,9 @@
 
 {# ###################Information########################## #}
 
-<section class="container py-5" id="tours">
+<section class="container py-5 mt-lg-5" id="tours">
 	{% for item in inf.information %}
-		<div class="row mt-5 d-flex">
+		<div class="row space d-flex">
 			<div class="col-lg-6 col-12 {% if loop.index == 2 %} order-2 mt-5 px-0 {% endif %}
 			">
 				<picture>
@@ -154,7 +170,7 @@
 				
 			</div>
 			<div class="col-lg-6 col-12 mt-5">
-				<h2 class="pb-5 {% if loop.index == 2 %} green {% endif %}">{{item.title}}</h2>
+				<h2 class="pb-5 text-center{% if loop.index == 2 %} green {% endif %}">{{item.title}}</h2>
 				{{item.cont|raw}}
 				{% if loop.index == 1%}
 					<a  href="{{ item.buttons[0] }}" class="btn  btn-outline-dange p-3 mt-3">{{ item.buttons[1] }}</a>
@@ -166,18 +182,23 @@
    
 	{# ###################Gallery########################## #}
     
-<section class="container fluid my-5 py-5" id="galery">
-	<div class="col-12">
-		<!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/5a4cdb2429e3591a960d6da8a92e7149.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+<section class="container fluid mt-lg-5 py-5" id="galery">
+	<div class="row mt-5  d-flex justify-content-center">
+		<h2>Check out the gallery</h2>
+	</div>
+	<div class="row mt-5">
+		<div class="col-12">
+			<!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/5a4cdb2429e3591a960d6da8a92e7149.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
 
+		</div>
 	</div>
 </section>
 {# ###################CONTACT########################## #}
-	<section class="container py-5 my-5" id="contact">					
-		<div class="row">
+	<section class="container py-5 my-5 " id="contact">					
+		<div class="row mt-lg-5">
 			<div class="col-12 col-lg-6">
-				<h2 class="">Extreme Riviera Maya</h2>
-				<h3 class="">Learn more about the project</h3>
+				<h2 class="my-5">Extreme Riviera Maya</h2>
+				<h3 class="my-5">Learn more about the project</h3>
 				<p>{{contact.cont}}</p>
 				<p>{{contact.cont2}}</p>
 				<p>{{contact.title}}</p>
@@ -210,13 +231,13 @@
 		</div>		
 	</section>	
 	{# ###################BRANDS########################## #}	
-	<section class="container mb-5 pb-5">
+	<section class="container my-lg-5 pb-5">
 		<div class="row">
 			<div class="col-12  d-flex justify-content-center">
 				<h2 >Brands that trust in us</h2>
 			</div>   
 		</div>	
-		<div class="row mt-3  d-flex justify-content-center">
+		<div class="row mt-5 d-flex justify-content-center">
 			{% for item in contact.brands %}
 			 	<div class="col-lg-4 col-6 p-4"><img src="{{item[0]}}" class="img-fluid" a alt="{{item[1]}}"></div>
 			 {% endfor %} 
@@ -243,13 +264,14 @@
 		</div>
 	{% endblock %}
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="assets/bootstrap.min.js"></script>
 		<script src="js/plugins.js"></script>
 		<script src="js/parallax.min.js"></script>
 		
 		
-		<script>
+		<!--<script>
 				$(document).ready(function() {
 							$("#submit_btn").click(function() {
 									var proceed = true;
@@ -294,11 +316,11 @@
 							//reset previously set border colors and hide all message on .keyup()
 							$("#contact_form  input[required=true],").keyup(function() {
 									$(this).css('border-color', '');
-									$("#result").slideUp();
+									$("#result").slidedv Up();
 							});
 					});
 			
-			</script>
+			</script>-->
 
 </body>
 </html>
